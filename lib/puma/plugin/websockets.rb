@@ -17,15 +17,14 @@ module Puma::Websockets
       if handler = env[UPGRADE]
         ws = WebSocket::Driver.rack(WS.new(env, io))
 
-        connection = Connection.new ws, handler
+        connection = Connection.new(ws, handler)
 
-        headers.each do |k,vs|
-          if vs.respond_to?(:to_s)
-            ws.set_header(k, vs.to_s)
-          end
+        headers.each do |k, vs|
+          ws.set_header(k, vs.to_s) if vs.respond_to?(:to_s)
         end
 
-        rec = WebSocketClient.new handler, ws, connection, io
+        rec = WebSocketClient.new(io)
+        rec.start(handler, ws, connection)
 
         ws.start
 
