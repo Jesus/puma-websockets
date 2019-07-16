@@ -1,11 +1,7 @@
 # Puma WebSockets
 
-Welcome to your new gem! In this directory, you'll find the files you need to
-be able to package up your Ruby library into a gem. Put your Ruby code in the
-file `lib/puma/websockets`. To experiment with that code, run `bin/console`
-for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+**WARNING:** This is work in progress, please come back next week. Or the
+week after next week.
 
 ## Installation
 
@@ -15,17 +11,16 @@ Add this line to your application's Gemfile:
 gem 'puma-websockets'
 ```
 
-And then execute:
+Then execute:
 
     $ bundle
 
-Or install it yourself as:
+And add the plugin to your Puma config file (this may be `config/puma.rb` in
+a Rails app):
 
-    $ gem install puma-websockets
-
-## Usage
-
-TODO: Write usage instructions here
+```ruby
+plugin :websockets
+```
 
 ## Development
 
