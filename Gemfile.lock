@@ -12,7 +12,7 @@ GEM
     nio4r (2.4.0)
     puma (4.0.1)
       nio4r (~> 2.0)
-    rake (10.5.0)
+    rake (13.0.1)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -36,7 +36,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.0)
   puma-websockets!
-  rake (~> 10.0)
+  rake (~> 13.0)
   rspec (~> 3.0)
 
 BUNDLED WITH
